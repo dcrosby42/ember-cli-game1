@@ -25,12 +25,14 @@ Milestone 0: Hello World
   Edit map: hello world
   ember serve
 
-Milestone 1: Render simple tile map using table and text
+Milestone 1: Render simple table+text map based on static data structures:
 
 - Edit map.hbs: HTML table with made-up content (3x3 tr/td layout), minor CSS to get lines and squares
 - ember generate controller map
 - Edit controllers/map.js: define GameMap structures, build map in init()
 - Edit templates/map.hbs: generate table rows and cells by looping over map structures
+
+Milestone 2: Build map via computed properties, move hero
 
 
 ## Prerequisites
