@@ -3,6 +3,29 @@
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
+## Dev Log
+
+Milestone 0: Hello World
+
+- (install node, npm, ember-cli)
+  http://www.ember-cli.com/#getting-started
+  npm install -g ember-cli
+  npm install -g bower
+  brew install watchman
+  npm install -g phantomjs
+
+- Create a new app called "game1"
+  ember new game1
+  cd game1/
+
+- Hello world:
+  ember generate route application
+  ember generate route map
+  Edit application.hbs: title and link to map
+  Edit map: hello world
+  ember serve
+
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
