@@ -1,0 +1,12 @@
+table.map {
+  background-color: black;
+}
+
+table.map td.map-cell {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font: 10px helvetica;
+}
+
