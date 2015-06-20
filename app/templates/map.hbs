@@ -2,14 +2,13 @@
 
 <div id="map-holder">
   <table id="map" class="map">
-    <tr class="map-row"><td class="map-cell">SNAKE</td><td class="map-cell"> </td><td class="map-cell"> </td></tr>
-    <tr class="map-row"><td class="map-cell">mtn.</td><td class="map-cell">tree</td><td class="map-cell">HERO</td></tr>
-    <tr class="map-row"><td class="map-cell">mtn.</td><td class="map-cell">tree</td><td class="map-cell">[CHEST]</td></tr>
+    {{#each row in map.rows}}
+      <tr class="map-row">
+        {{#each cell in row.cells}}
+          <td class="map-cell">{{cell.text}}</td>
+        {{/each}}
+      </tr>
+    {{/each}}
   </table>
 </div>
 
-<ul>
-{{#each person in people}}
-  <li>Hello {{person.name}}</li>
-{{/each}}
-</ul>
