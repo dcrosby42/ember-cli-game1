@@ -34,6 +34,15 @@ Milestone 1: Render simple table+text map based on static data structures:
 
 Milestone 2: Build map via computed properties, move hero
 
+- Define Entity structure
+- Build-up 'entities' property
+- Define 'map' computed property, newEmptyMap() helper
+- Update view to have up/down/left/right buttons
+- actions: heroUp, heroDown, etc.
+- Update view to bind mapWidth and mapHeight properties
+
+
+
 
 ## Prerequisites
 
