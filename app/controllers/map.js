@@ -22,8 +22,8 @@ var Entity = Ember.Object.extend({
 export default Ember.Controller.extend({
   init: function() {
     var entities = [
-      Entity.create({id: 1, x: 2, y: 1, text: 'HERO'}),
-      Entity.create({id: 2, x: 0, y: 0, text: 'SNAKE'})
+      Entity.create({x: 2, y: 1, text: 'HERO'}),
+      Entity.create({x: 0, y: 0, text: 'SNAKE'})
     ];
     this.set('mapWidth', 4);
     this.set('mapHeight', 3);
