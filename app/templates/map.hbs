@@ -1,16 +1,21 @@
-
 <h2>Map</h2>
 Width: {{input type="text" value=mapWidth size="3"}}
 Height: {{input type="text" value=mapHeight size="3"}}
 <br>
 Player: {{input type="text" value=entities.0.text size="10"}}<br>
-<button {{action 'heroUp'}}>Up</button>
-<br>
-<button {{action 'heroLeft'}}>Left</button>
-<button {{action 'heroRight'}}>Right</button>
-<br>
-<button {{action 'heroDown'}}>Down</button>
-<br>
+<div class="row">
+  <div class='col-md-offset-1 col-md-1 btn btn-default' {{action 'heroUp'}}>Up</div>
+</div>
+
+<div class="row">
+  <div class='col-md-1 btn btn-default' {{action 'heroLeft'}}>Left</div>
+  <div class='col-md-offset-1 col-md-1 btn btn-default' {{action 'heroRight'}}>Right</div>
+</div>
+
+<div class="row">
+  <div class='col-md-offset-1 col-md-1 btn btn-default' {{action 'heroDown'}}>Down</div>
+</div>
+
 <div id="map-holder">
   <table id="map" class="map">
     {{#each row in map.rows}}
