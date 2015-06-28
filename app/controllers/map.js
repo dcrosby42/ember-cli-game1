@@ -37,7 +37,7 @@ export default Ember.Controller.extend({
     var height = this.get('mapHeight');
     if (height < 1) { height = 1; }
 
-    var map = newEmptyMap(width,height)
+    var map = newEmptyMap(width,height);
     var i, len, e, mapRow, mapCell;
     for (i = 0, len = this.get('entities').get('length'); i < len; i++) {
       e = this.get('entities').get(i);
@@ -78,7 +78,7 @@ export default Ember.Controller.extend({
 var newEmptyMap = function(width, height) {
   var rows = [];
   for (var r = 0; r < height; r++) {
-    var cells = []
+    var cells = [];
     for (var c = 0; c < width; c++) {
       var cell = MapCell.create();
       cells.push(cell);
@@ -88,5 +88,5 @@ var newEmptyMap = function(width, height) {
   }
   var map = GameMap.create({rows: rows});
   return map;
-}
+};
 
