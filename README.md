@@ -41,7 +41,12 @@ Milestone 2: Build map via computed properties, move hero
 - actions: heroUp, heroDown, etc.
 - Update view to bind mapWidth and mapHeight properties
 
+Milestone 3: Style and layout via Twitter Bootstrap
 
+- Update index.html: Include Bootstrap CSS and JS
+- Update application.hbs: Add navbar
+- Rewrite HTML of map.hbs to create 2-col layout: Controls, Attributes, map view
+- (minor routing and css tweaks to round things out, change default map dimensions to 10x8)
 
 
 ## Prerequisites
