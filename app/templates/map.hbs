@@ -1,30 +1,81 @@
-<h2>Map</h2>
-Width: {{input type="text" value=mapWidth size="3"}}
-Height: {{input type="text" value=mapHeight size="3"}}
-<br>
-Player: {{input type="text" value=entities.0.text size="10"}}<br>
-<div class="row">
-  <div class='col-md-offset-1 col-md-1 btn btn-default' {{action 'heroUp'}}>Up</div>
-</div>
+<div class="row"> <!-- row 0 -->
+  <div class="col-md-12">
+    <h2>Map</h2>
+  </div>
+</div> <!-- row 0 -->
 
-<div class="row">
-  <div class='col-md-1 btn btn-default' {{action 'heroLeft'}}>Left</div>
-  <div class='col-md-offset-1 col-md-1 btn btn-default' {{action 'heroRight'}}>Right</div>
-</div>
+<div class="row"> <!-- row 1-->
 
-<div class="row">
-  <div class='col-md-offset-1 col-md-1 btn btn-default' {{action 'heroDown'}}>Down</div>
-</div>
+  <div class="col-md-3">
 
-<div id="map-holder">
-  <table id="map" class="map">
-    {{#each row in map.rows}}
-      <tr class="map-row">
-        {{#each cell in row.cells}}
-          <td class="map-cell">{{cell.text}}</td>
+    <!--
+    -
+    - CONTROLS PANEL
+    - 
+    -->
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Controls</h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class='col-md-offset-4 col-md-4 btn btn-sm btn-default' {{action 'heroUp'}}>Up</div>
+        </div>
+        <div class="row">
+          <div class='col-md-4 btn btn-sm btn-default' {{action 'heroLeft'}}>Left</div>
+          <div class='col-md-offset-4 col-md-4 btn btn-sm btn-default' {{action 'heroRight'}}>Right</div>
+        </div>
+        <div class="row">
+          <div class='col-md-offset-4 col-md-4 btn btn-sm btn-default' {{action 'heroDown'}}>Down</div>
+        </div>
+      </div>
+    </div>
+
+    <!--
+    -
+    - ATTRIBUTES PANEL
+    - 
+    -->
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Attributes</h3>
+      </div>
+      <div class="panel-body">
+        <table class="table">
+          <tbody>
+            <tr>
+              <th>Width:</th>
+              <td>{{input value=mapWidth type="text" name="mapWidth" size="3"}}</td>
+            </tr>
+            <tr>
+              <th>Height:</th>
+              <td>{{input value=mapHeight type="text" name="mapHeight" size="3"}}</td>
+            </tr>
+            <tr>
+              <th>Name:</th>
+              <td>{{input value=entities.0.text type="text" name="heroName" size="10"}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div> <!-- panel-body -->
+    </div> <!-- panel -->
+  </div> <!-- column -->
+      
+  <div class="col-md-offset-0 col-md-9">
+    <div id="map-holder">
+      <table id="map" class="map">
+        <tbody>
+        {{#each row in map.rows}}
+          <tr class="map-row">
+            {{#each cell in row.cells}}
+              <td class="map-cell">{{cell.text}}</td>
+            {{/each}}
+          </tr>
         {{/each}}
-      </tr>
-    {{/each}}
-  </table>
-</div>
+        </tbody>
+      </table>
+    </div>
+  </div> <!-- column -->
+
+</div> <!-- row 2 -->
 

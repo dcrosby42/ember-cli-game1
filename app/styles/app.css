@@ -2,6 +2,7 @@ table.map {
   background-color: black;
   border-collapse: inherit;
   border-spacing: 1px;
+  margin: 0 auto;
 }
 
 table.map td.map-cell {

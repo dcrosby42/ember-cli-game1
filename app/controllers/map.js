@@ -25,8 +25,8 @@ export default Ember.Controller.extend({
       Entity.create({x: 2, y: 1, text: 'HERO'}),
       Entity.create({x: 0, y: 0, text: 'SNAKE'})
     ];
-    this.set('mapWidth', 4);
-    this.set('mapHeight', 3);
+    this.set('mapWidth', 10);
+    this.set('mapHeight', 8);
     this.set('entities', entities);
   },
 
